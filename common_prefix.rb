@@ -6,7 +6,7 @@
 require 'pp' # A massive one. I don't remember why I required this, but it's useful for printing out hash maps nicely in your terminal.
 
 def longest_common_prefix(strs)
-  strings = strs.sort
+  strings = strs.sort_by(&:downcase) # If you had Apple and banana then banana would come before Apple due to ruby using ASCII
   answer = ''
   strings[0].each_char.with_index do |char, index|
     return answer unless char == strings[strings.length - 1][index]
