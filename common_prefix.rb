@@ -9,7 +9,7 @@ def longest_common_prefix(strs)
   strings = strs.sort_by(&:downcase) # If you had Apple and banana then banana would come before Apple due to ruby using ASCII
   answer = ''
   strings[0].each_char.with_index do |char, index|
-    return answer unless char == strings[strings.length - 1][index]
+    return answer unless char == strings.last[index]
 
     answer += char
     answer
