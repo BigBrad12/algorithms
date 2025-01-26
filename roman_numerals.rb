@@ -1,10 +1,13 @@
-# The key to solving this solution is to look past the whole idea of if 'I' comes before 'V' or 'X' then the result is 9, and instead notice the pattern of the entire
-# string to begin with.
+# frozen_string_literal: true
+
+# The key to solving this solution is to look past the whole idea of if 'I' comes before 'V' or 'X' then the result is 9, and instead notice
+# the pattern of the entire string to begin with.
 # All the edge cases where IV is 4 or CD is 400 have one thing is common. Do you notice what they all have in common?
-# when you read the number MCMXCIV, read it out to yourself. M - 1000, C - 100, M - 1000, X - 10, L - 50, C - 100, I - 1, V - 5. Notice that the numbers either increase
-# or decrease from right to left. M - C is a decrease, but thereafter C - M is an increase. You can use that to solve this problem.
-# After just three leetcode questions, I start to realise being good at this stuff has a lot to do with looking at things in a different way, thinking out of the box,
-# and noticing patterns.
+# when you read the number MCMXCIV, read it out to yourself. M - 1000, C - 100, M - 1000, X - 10, L - 50, C - 100, I - 1, V - 5. Notice that
+# the numbers either increase or decrease from right to left. M - C is a decrease, but thereafter C - M is an increase.
+# You can use that to solve this problem.
+# After just three leetcode questions, I start to realise being good at this stuff has tons to do with looking at things in a different way,
+# thinking out of the box, and noticing patterns.
 def roman_to_int(s)
   answer = 0
   hash = {
