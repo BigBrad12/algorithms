@@ -20,6 +20,9 @@
 # Once we find it, then set a pointer to the index of haystack, and then pick out the next x characters of needle's length.
 # If the returned value is equal to needle, then return the index at which we started. If not, then increment the pointer, and try again.
 # This can be a while answer == -1 loop, and when we find the needle, then change answer to the index that we start at.
+#
+# The below solution now works and it has execution time of 0ms, however there is a better algorithm to solve this, the Knuth-Morris-Pratt (KMP)
+# algorithm is the one I'm going to try out.
 require 'pp'
 def str_str(haystack, needle)
   return -1 if needle.length > haystack.length
